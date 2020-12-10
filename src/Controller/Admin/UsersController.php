@@ -1,7 +1,7 @@
 <?php
-namespace App\Controller;
+namespace App\Controller\Admin;
 
-use App\Controller\AppController;
+use App\Controller\Admin\AppControllerAdmin;
 
 /**
  * Users Controller
@@ -10,19 +10,15 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class UsersController extends AppController
+class UsersController extends AppControllerAdmin
 {
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['login', 'register']);
+        $this->Auth->allow(['login', 'logout']);
     }
 
-    /**
-     * Login method
-     *
-     * @return \Cake\Http\Response|null Redirects on homepage with successfull message, error message otherwise.
-     */
+
     public function login()
     {
         if ($this->request->is('post'))
@@ -32,7 +28,7 @@ class UsersController extends AppController
             if ($user)
             {
                 $this->Auth->setUser($user);
-                $this->redirect('/');
+                $this->redirect('/admin/posts');
                 $this->Flash->success("Vous êtes connecté(e)");
             }
             else
@@ -43,11 +39,6 @@ class UsersController extends AppController
     }
 
 
-    /**
-     * Logout method
-     *
-     * @return \Cake\Http\Response|null Redirects on homepage with successfull message.
-     */
     public function logout()
     {
         $this->Auth->logout();
@@ -55,54 +46,7 @@ class UsersController extends AppController
         $this->redirect('/');
     }
 
-
-    /**
-     * Register method
-     *
-     * @return \Cake\Http\Response|null Redirects on homepage with successfull message, error message otherwise.
-     */
-    public function register()
-    {
-        $user = $this->Users->newEntity();
-        if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-
-            if  ($user->hasErrors())
-            {
-                $this->Flash->error(__('Erreur(s) dans le formulaire'));
-            }
-            else
-            {
-                $validPasswordFormat = preg_match('#^\S*(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[0-9])(?=\S*[\W])\S{8,20}$#', $this->request->getData('password'));
-                $emailAlreadyExists = $this->Users->find('all')
-                    ->where(['Users.email' => $user->email])
-                    ->first();
-
-                if ($emailAlreadyExists)
-                {
-                    $this->Flash->error(__('Adresse e-mail déjà utilisée. Votre utilisateur n\'a pas été enregistré'));                    
-                }
-                elseif(!$validPasswordFormat)
-                {
-                    $this->Flash->error(__('Le mot de passe doit contenir entre 8 et 20 caractères dont 1 chiffre, 1 minuscule, 1 majuscule et 1 caractère spécial'));
-                }
-                else
-                {
-                    if ($this->Users->save($user)) {
-                        $this->Flash->success(__('Votre compte a bien été créé'));
-        
-                        return $this->redirect('/');
-                    }
-                    else
-                    {
-                        $this->Flash->error(__('Une erreur est apparue. Votre compte n\'a pas pu être créé'));
-                    }
-                }    
-            }  
-        }
-        $this->set(compact('user'));
-    }
-
+    
     /**
      * Index method
      *
@@ -132,6 +76,26 @@ class UsersController extends AppController
     }
 
     /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function add()
+    {
+        $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('The user has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+        }
+        $this->set(compact('user'));
+    }
+
+    /**
      * Edit method
      *
      * @param string|null $id User id.
@@ -153,5 +117,25 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+    }
+
+    /**
+     * Delete method
+     *
+     * @param string|null $id User id.
+     * @return \Cake\Http\Response|null Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function delete($id = null)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+        $user = $this->Users->get($id);
+        if ($this->Users->delete($user)) {
+            $this->Flash->success(__('The user has been deleted.'));
+        } else {
+            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
     }
 }
