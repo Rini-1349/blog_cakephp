@@ -46,10 +46,28 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Flash');
 
+        $this->loadComponent('Auth', [
+            'authError' => "Vous n'êtes pas autorisé(e) à accéder à cet emplacement.",
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'email',
+                        'password' => 'password'
+                    ]
+                ]],
+            'authorize' => ['Controller'],
+            'unauthorizedRedirect' => ['Prefix' => false, 'controller' => 'Posts']
+        ]);
+        
         /*
          * Enable the following component for recommended CakePHP security settings.
          * see https://book.cakephp.org/3/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+    }
+
+    public function isAuthorized()
+    {
+        return true;
     }
 }

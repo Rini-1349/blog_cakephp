@@ -89,6 +89,13 @@ class UsersTable extends Table
             ->notEmptyString('password');
 
         $validator
+            ->scalar('password_confirm')
+            ->maxLength('password_confirm', 255)
+            ->requirePresence('password_confirm', 'create')
+            ->notEmptyString('password_confirm')    
+            ->equalToField('password_confirm', 'password', 'Confirmation de mot de passe incorrecte', 'create');
+
+        $validator
             ->notEmptyString('role');
 
         return $validator;

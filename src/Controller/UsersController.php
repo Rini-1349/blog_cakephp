@@ -12,6 +12,12 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['login', 'register']);
+    }
+
     /**
      * Index method
      *
@@ -104,18 +110,78 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+
+
     public function login()
     {
+        if ($this->request->is('post'))
+        {
+            $user = $this->Auth->identify();
 
+            if ($user)
+            {
+                $this->Auth->setUser($user);
+                $this->redirect('/');
+                $this->Flash->success("Vous êtes connecté(e)");
+            }
+            else
+            {
+                $this->Flash->error(__('Authentification incorrecte'));
+            }
+        }
     }
+
+
+
 
     public function register()
     {
+        $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
 
+            if  ($user->hasErrors())
+            {
+                $this->Flash->error(__('Erreur(s) dans le formulaire'));
+            }
+            else
+            {
+                $validPasswordFormat = preg_match('#^\S*(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[0-9])(?=\S*[\W])\S{8,20}$#', $this->request->getData('password'));
+                $emailAlreadyExists = $this->Users->find('all')
+                    ->where(['Users.email' => $user->email])
+                    ->first();
+
+                if ($emailAlreadyExists)
+                {
+                    $this->Flash->error(__('Adresse e-mail déjà utilisée. Votre utilisateur n\'a pas été enregistré'));                    
+                }
+                elseif(!$validPasswordFormat)
+                {
+                    $this->Flash->error(__('Le mot de passe doit contenir entre 8 et 20 caractères dont 1 chiffre, 1 minuscule, 1 majuscule et 1 caractère spécial'));
+                }
+                else
+                {
+                    if ($this->Users->save($user)) {
+                        $this->Flash->success(__('Votre compte a bien été créé'));
+        
+                        return $this->redirect('/');
+                    }
+                    else
+                    {
+                        $this->Flash->error(__('Une erreur est apparue. Votre compte n\'a pas pu être créé'));
+                    }
+                }    
+            }  
+        }
+        $this->set(compact('user'));
     }
+
+
 
     public function logout()
     {
+        $this->Auth->logout();
+        $this->Flash->success("Vous êtes déconnecté(e)");
         $this->redirect('/');
     }
 }
