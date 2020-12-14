@@ -131,6 +131,15 @@ class UsersController extends AppController
         $this->set('user', $user);
     }
 
+    public function profile($id = null)
+    {
+        $user = $this->Users->get($id, [
+            'contain' => ['Posts'],
+        ]);
+
+        $this->set('user', $user);
+    }
+
     /**
      * Edit method
      *

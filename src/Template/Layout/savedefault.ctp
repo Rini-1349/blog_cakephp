@@ -15,7 +15,6 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,23 +43,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-            <?php
-                if($loggedUser != null) {
-                ?>
-                <?php
-                    } else {  ?>
-                        <li><?= $this->Html->link(__('Connexion'), ['controller' => 'users', 'action' => 'login']) ?></li>
-                        <?php }
-                ?>
-                <?php
-                if($loggedUser != null) {
-                ?>
-                    <li> <?= $this->Html->link(__('Détails'), ['controller' => 'users', 'action' => 'profile', $loggedUser['id']]) ?></li>
-                    <li> <?= $this->Html->link(__('Modifier'), ['controller' => 'users', 'action' => 'edit', $loggedUser['id']]) ?></li>
-                    <li> <?= $this->Html->link(__('Déconnexion'), ['controller' => 'users', 'action' => 'logout', $loggedUser['id']]) ?></li>
-                <?php
-                    }
-                ?>
+                <li><?= $this->Html->link(__('Connexion'), ['controller' => 'users', 'action' => 'login']) ?></li>
+                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>
     </nav>
