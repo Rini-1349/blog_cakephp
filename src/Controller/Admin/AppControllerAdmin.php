@@ -59,11 +59,23 @@ class AppControllerAdmin extends Controller
             'unauthorizedRedirect' => ['Prefix' => false, 'controller' => 'Users', 'action' => 'login']
         ]);
         
-        /*
-         * Enable the following component for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
+        $loggedAdmin = null;
+
+        if($this->Auth->user())
+        {
+            $loggedAdmin = $this->Auth->user();
+        }
+
+        $this->set('loggedAdmin', $loggedAdmin);
+
+        $loggedUser = null;
+
+        if($this->Auth->user())
+        {
+            $loggedUser = $this->Auth->user();
+        }
+
+        $this->set('loggedUser', $loggedUser);
     }
 
     public function isAuthorized($user = null)
