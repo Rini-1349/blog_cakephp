@@ -38,12 +38,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                <h1><a>STLN Actus</a></h1>
             </li>
         </ul>
         <div class="top-bar-section">
+            <ul class="left">
+                <li><?= $this->Html->link(__('Articles'), ['controller' => 'posts', 'action' => 'index']) ?></li>
+            </ul>
+        </div>
+        <div class="top-bar-section">
             <ul class="right">
                 <li><?= $this->Html->link(__('Connexion'), ['controller' => 'users', 'action' => 'login']) ?></li>
+                <li><?= $this->Html->link(__('Inscription'), ['controller' => 'users', 'action' => 'register']) ?></li>
+                <li><?= $this->Html->link(__('Déconexion'), ['controller' => 'users', 'action' => 'logout']) ?></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>

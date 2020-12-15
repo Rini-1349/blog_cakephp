@@ -1,0 +1,197 @@
+2020-12-09 16:55:30 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::legout() could not be found, or is not accessible. (D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php:596)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'legout',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(126): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xamp\htdocs\www\blog_cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/legout
+Referer URL: http://localhost/www/blog_cakephp/users/register
+
+
+2020-12-09 16:55:53 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::legout() could not be found, or is not accessible. (D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php:596)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'legout',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(126): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xamp\htdocs\www\blog_cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/legout
+Referer URL: http://localhost/www/blog_cakephp/users/register
+
+
+2020-12-14 16:23:55 Error: [Cake\Controller\Exception\MissingActionException] Action CategoriesController::add() could not be found, or is not accessible. (D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php:596)
+Exception Attributes: array (
+  'controller' => 'CategoriesController',
+  'action' => 'add',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriesController))
+#2 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(126): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xamp\htdocs\www\blog_cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /categories/add
+Referer URL: http://localhost/www/blog_cakephp/posts/add
+
+
+2020-12-14 16:50:50 Error: [Error] Call to a member function getClientFilename() on array (D:\xamp\htdocs\www\blog_cakephp\src\Controller\PostsController.php:64)
+#0 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\PostsController->add()
+#1 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PostsController))
+#3 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(126): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xamp\htdocs\www\blog_cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /posts/add
+Referer URL: http://localhost/www/blog_cakephp/posts/add
+
+
+2020-12-14 16:51:42 Error: [Error] Call to a member function getClientFilename() on array (D:\xamp\htdocs\www\blog_cakephp\src\Controller\PostsController.php:64)
+#0 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\PostsController->add()
+#1 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PostsController))
+#3 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(126): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xamp\htdocs\www\blog_cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /posts/add
+Referer URL: http://localhost/www/blog_cakephp/posts/add
+
+
+2020-12-14 16:53:14 Error: [Error] Call to a member function getClientFilename() on array (D:\xamp\htdocs\www\blog_cakephp\src\Controller\PostsController.php:64)
+#0 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\PostsController->add()
+#1 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PostsController))
+#3 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(126): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xamp\htdocs\www\blog_cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /posts/add
+Referer URL: http://localhost/www/blog_cakephp/posts/add
+
+
+2020-12-14 17:08:03 Error: [Error] Call to a member function getClientFilename() on array (D:\xamp\htdocs\www\blog_cakephp\src\Controller\PostsController.php:65)
+#0 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\PostsController->add()
+#1 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PostsController))
+#3 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(126): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xamp\htdocs\www\blog_cakephp\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xamp\htdocs\www\blog_cakephp\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /posts/add
+Referer URL: http://localhost/www/blog_cakephp/posts/add
+
+

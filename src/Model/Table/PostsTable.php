@@ -80,6 +80,19 @@ class PostsTable extends Table
             ->requirePresence('image', 'create')
             ->notEmptyFile('image');
 
+        $validator
+            ->allowEmptyFile('image')
+            ->add('image', [
+                'mimeType' => [
+                    'rule' => ['mimeType', ['image/jpg', 'image/png', 'image/jpeg'] ],
+                    'image' => 'Merci de mettre uniquement des images en jpg et png.',
+                ],
+                'fileSize' => [
+                    'rule' => ['fileSize', '<=', '1MB' ],
+                    'message' => 'Merci de ne pas dépasser une taille d\'image de 1MB',
+                ],
+            ]);
+
         return $validator;
     }
 

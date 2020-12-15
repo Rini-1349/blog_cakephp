@@ -1,0 +1,980 @@
+2020-12-09 15:47:40 Debug: duration=8 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 15:47:40 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 15:47:40 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 15:47:40 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 15:47:40 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users LIMIT 20 OFFSET 0
+2020-12-09 15:47:40 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM users Users
+2020-12-09 16:49:45 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 16:49:45 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 16:49:45 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 16:49:45 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 16:49:45 Debug: duration=20 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 16:49:45 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 16:49:45 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 16:49:45 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 16:49:45 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 16:49:45 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 16:49:45 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 16:49:45 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 16:49:45 Debug: duration=0 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:49:45 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:55:58 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 16:55:58 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 16:55:58 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 16:55:58 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 16:55:58 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users LIMIT 20 OFFSET 0
+2020-12-09 16:55:58 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM users Users
+2020-12-09 16:56:00 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 16:56:00 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 16:56:00 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 16:56:00 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 16:56:00 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 16:56:00 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 16:56:00 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 16:56:00 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 16:56:00 Debug: duration=0 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:56:00 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:56:05 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:56:05 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:58:16 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 16:58:16 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 16:58:16 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 16:58:16 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 16:58:16 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 16:58:16 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 16:58:16 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 16:58:16 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 16:58:16 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 16:58:16 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 16:58:16 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 16:58:16 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 16:58:16 Debug: duration=0 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:58:16 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:58:18 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:58:18 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:58:20 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:58:20 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:58:22 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:58:22 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:58:51 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:58:51 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:58:55 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:58:55 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:58:55 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:58:55 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 16:59:28 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 16:59:28 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:01:25 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:01:25 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:01:25 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:01:25 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:01:25 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:01:25 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:01:25 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:01:25 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:01:25 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:01:25 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:01:25 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:01:25 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:01:25 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:01:25 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:01:31 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:01:31 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:01:43 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:01:43 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:02:42 Debug: duration=1 rows=0 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:02:42 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:15:55 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:15:55 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:15:55 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:15:55 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:15:55 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:15:55 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:15:55 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:15:55 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:15:55 Debug: duration=4 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:15:55 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:15:55 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:15:55 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:15:55 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:15:55 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:16:12 Debug: duration=1 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories WHERE Categories.id = 1 LIMIT 1
+2020-12-09 17:16:12 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.category_id in (1)
+2020-12-09 17:16:46 Debug: duration=1 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories WHERE Categories.id = 1 LIMIT 1
+2020-12-09 17:16:46 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.category_id in (1)
+2020-12-09 17:17:44 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:17:44 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:17:48 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.title asc LIMIT 20 OFFSET 0
+2020-12-09 17:17:48 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:17:51 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.image asc LIMIT 20 OFFSET 0
+2020-12-09 17:17:51 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:17:54 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:17:54 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:17:56 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:17:56 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:17:56 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:17:56 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:17:56 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:17:56 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:17:56 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:17:56 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:17:56 Debug: duration=0 rows=1 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.id = 1 LIMIT 1
+2020-12-09 17:17:56 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.user_id in (1)
+2020-12-09 17:18:05 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.id = 1 LIMIT 1
+2020-12-09 17:18:05 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.user_id in (1)
+2020-12-09 17:21:24 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:21:24 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:21:24 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:21:24 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:21:24 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:21:24 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:21:24 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:21:24 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:21:24 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:21:24 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:21:24 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:21:24 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:21:24 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:21:24 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:21:56 Debug: duration=1 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories WHERE Categories.id = 1 LIMIT 1
+2020-12-09 17:21:56 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.category_id in (1)
+2020-12-09 17:23:34 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:23:34 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:23:34 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:23:34 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:23:35 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:23:35 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:23:35 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:23:35 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:23:35 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:23:35 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:23:35 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:23:35 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:23:35 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:23:35 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:23:55 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:23:55 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:24:31 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:24:31 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:24:36 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id desc LIMIT 20 OFFSET 0
+2020-12-09 17:24:36 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:24:38 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:24:38 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:28:43 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:28:43 Debug: duration=2 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:28:43 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:28:43 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:28:43 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:28:43 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:28:43 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:28:43 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:28:43 Debug: duration=4 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:28:43 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:28:43 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:28:43 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:28:43 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:28:43 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:29:12 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:29:12 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:29:36 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) ORDER BY Posts.category_id asc LIMIT 20 OFFSET 0
+2020-12-09 17:29:36 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:29:42 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:29:42 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:29:45 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:29:45 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:31:41 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:31:41 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:31:41 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:31:41 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:31:41 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:31:41 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:31:41 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:31:41 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:31:41 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:31:41 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:31:41 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:31:41 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:31:41 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:31:41 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:31:44 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:31:44 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:32:17 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:32:17 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:32:56 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:32:56 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:33:12 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:33:12 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:34:02 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:34:02 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:34:02 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:34:02 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:34:02 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:34:02 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:34:02 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:34:02 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:34:02 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:34:02 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:34:02 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:34:02 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:34:02 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:34:02 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:34:25 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:34:25 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:35:02 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:35:02 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:35:19 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:35:19 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:35:57 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:35:57 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:36:10 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:36:10 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:36:10 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:36:10 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:36:10 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:36:10 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:36:10 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:36:10 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:36:10 Debug: duration=2 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:36:10 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:36:10 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:36:10 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:36:10 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:36:10 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:36:43 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:36:43 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:37:07 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:37:07 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:38:49 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:38:49 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:38:49 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:38:49 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:38:49 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:38:49 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:38:49 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:38:49 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:38:49 Debug: duration=2 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:38:49 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:38:49 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:38:49 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:38:49 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:38:49 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:40:58 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:40:58 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:40:58 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:40:58 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:40:58 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:40:58 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:40:58 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:40:58 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:40:58 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:40:58 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:40:58 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:40:58 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:40:58 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:40:58 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:41:12 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:41:12 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:41:14 Debug: duration=1 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories WHERE Categories.id = 1 LIMIT 1
+2020-12-09 17:41:14 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.category_id in (1)
+2020-12-09 17:41:58 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:41:58 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-09 17:42:00 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories WHERE Categories.id = 1 LIMIT 1
+2020-12-09 17:42:00 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.category_id in (1)
+2020-12-09 17:42:51 Debug: duration=1 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories WHERE Categories.id = 1 LIMIT 1
+2020-12-09 17:42:51 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified` FROM posts Posts WHERE Posts.category_id in (1)
+2020-12-09 17:44:11 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-09 17:44:11 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-09 17:44:11 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-09 17:44:11 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-09 17:44:11 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-09 17:44:11 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-09 17:44:11 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 17:44:11 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 17:44:11 Debug: duration=2 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-09 17:44:11 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-09 17:44:11 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-09 17:44:11 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-09 17:44:11 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-09 17:44:11 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-14 16:16:37 Debug: duration=10 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:16:37 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:16:37 Debug: duration=32 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:16:37 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:16:37 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:16:37 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:16:37 Debug: duration=11 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:16:37 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:16:37 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:16:37 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:16:37 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:16:37 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:16:37 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-14 16:16:37 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-14 16:16:43 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-14 16:16:43 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-14 16:17:15 Debug: duration=13 rows=1 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'tom13' LIMIT 1
+2020-12-14 16:17:15 Debug: duration=10 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:23 Debug: duration=0 rows=1 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'Tom13' LIMIT 1
+2020-12-14 16:17:23 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:29 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'tom' LIMIT 1
+2020-12-14 16:17:29 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:29 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:36 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'Tom icard' LIMIT 1
+2020-12-14 16:17:36 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:36 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:44 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'TomIcard13013' LIMIT 1
+2020-12-14 16:17:44 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:45 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:48 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'a"rfataztazetzeyt' LIMIT 1
+2020-12-14 16:17:48 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:17:48 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:04 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'tom13013@' LIMIT 1
+2020-12-14 16:18:04 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:04 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:09 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'tom13013@.' LIMIT 1
+2020-12-14 16:18:09 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:09 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:13 Debug: duration=1 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'tom13013@.azfraqzfrtatatr' LIMIT 1
+2020-12-14 16:18:13 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:13 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:41 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:18:41 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:18:41 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:18:41 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:18:41 Debug: duration=0 rows=1 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'Tom13' LIMIT 1
+2020-12-14 16:18:41 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:56 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'Tom' LIMIT 1
+2020-12-14 16:18:56 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:56 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:56 Debug: duration=0 rows=0 BEGIN
+2020-12-14 16:18:56 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:18:56 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM users Users WHERE Users.pseudo = 'Tom' LIMIT 1
+2020-12-14 16:18:56 Debug: duration=0 rows=1 INSERT INTO users (name, first_name, pseudo, email, password, created) VALUES ('icard', 'tom', 'Tom', 'test@outlook.fr', '$2y$10$s7bYl4M7NGU3YxOb03gCi.K1IgQX9IciCbluKMwBsIHHzIstlp0oO', '2020-12-14 16:18:56')
+2020-12-14 16:18:56 Debug: duration=0 rows=0 COMMIT
+2020-12-14 16:18:56 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:18:56 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:18:56 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:18:56 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:18:56 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:18:56 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:18:56 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:18:56 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:18:56 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-14 16:18:56 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-14 16:19:09 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created` FROM users Users WHERE Users.email = 'test@outlook.fr' LIMIT 1
+2020-12-14 16:19:10 Debug: duration=1 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-14 16:19:10 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-14 16:19:35 Debug: duration=1 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:19:35 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:20:46 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:20:46 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:20:46 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:20:46 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:20:46 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:20:46 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:20:49 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:20:49 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:22:36 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:22:36 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:22:36 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:22:36 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:22:36 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:22:36 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:22:36 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:22:36 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:22:36 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:22:36 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:23:19 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:23:19 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:23:19 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:23:19 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:23:19 Debug: duration=0 rows=1 SELECT Posts.id AS `Posts__id`, Posts.user_id AS `Posts__user_id`, Posts.category_id AS `Posts__category_id`, Posts.title AS `Posts__title`, Posts.content AS `Posts__content`, Posts.image AS `Posts__image`, Posts.created AS `Posts__created`, Posts.modified AS `Posts__modified`, Users.id AS `Users__id`, Users.name AS `Users__name`, Users.first_name AS `Users__first_name`, Users.pseudo AS `Users__pseudo`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.role AS `Users__role`, Users.created AS `Users__created`, Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id) LIMIT 20 OFFSET 0
+2020-12-14 16:23:19 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM posts Posts INNER JOIN users Users ON Users.id = (Posts.user_id) INNER JOIN categories Categories ON Categories.id = (Posts.category_id)
+2020-12-14 16:23:23 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:23:23 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:23:55 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:23:55 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:23:56 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:23:56 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:24:21 Debug: duration=1 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:24:21 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:24:54 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:24:54 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:24:54 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:24:54 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:24:54 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:24:54 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:24:54 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:24:54 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:24:54 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:24:54 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:25:06 Debug: duration=1 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:25:06 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:26:13 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:26:13 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:26:13 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:26:13 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:26:13 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:26:13 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:31:18 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:31:18 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:31:18 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:31:18 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:31:18 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:31:18 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:31:18 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:31:18 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:31:18 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:31:18 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:31:18 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:31:18 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:31:18 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:31:18 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:32:13 Debug: duration=1 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:32:13 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:34:57 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:34:57 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:34:57 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:34:57 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:34:57 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:34:57 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:34:57 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:34:57 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:34:57 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:34:57 Debug: duration=2 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:34:57 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:34:57 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:34:57 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:34:57 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:38:34 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:38:34 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:38:34 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:38:34 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:38:34 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:38:34 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:38:34 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:38:34 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:38:34 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:38:34 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:38:34 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:38:34 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:38:34 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:38:34 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:48:39 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:48:39 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:48:39 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:48:39 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:48:39 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:48:39 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:48:39 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:48:39 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:48:39 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:48:39 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:48:39 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:48:39 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:48:39 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:48:39 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:48:41 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:48:41 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:50:28 Debug: duration=1 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:50:28 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:50:42 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 16:50:42 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 16:50:42 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 16:50:42 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 16:50:42 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 16:50:42 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 16:50:42 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 16:50:42 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 16:50:42 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:50:42 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:50:42 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:50:42 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 16:50:42 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:50:42 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:51:33 Debug: duration=1 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:51:33 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:51:36 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 16:51:36 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 16:52:43 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 16:52:43 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 16:52:43 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 16:52:43 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 17:07:53 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-12-14 17:07:53 Debug: duration=1 rows=3 SHOW INDEXES FROM `users`
+2020-12-14 17:07:53 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-14 17:07:53 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-14 17:07:53 Debug: duration=20 rows=2 SHOW FULL COLUMNS FROM `categories`
+2020-12-14 17:07:53 Debug: duration=1 rows=1 SHOW INDEXES FROM `categories`
+2020-12-14 17:07:53 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'categories' AND rc.TABLE_NAME = 'categories'
+2020-12-14 17:07:53 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'categories'
+2020-12-14 17:07:53 Debug: duration=3 rows=8 SHOW FULL COLUMNS FROM `posts`
+2020-12-14 17:07:53 Debug: duration=1 rows=3 SHOW INDEXES FROM `posts`
+2020-12-14 17:07:53 Debug: duration=1 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'blog_cakephp' AND kcu.TABLE_NAME = 'posts' AND rc.TABLE_NAME = 'posts'
+2020-12-14 17:07:53 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'posts'
+2020-12-14 17:07:53 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 17:07:53 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
+2020-12-14 17:07:55 Debug: duration=0 rows=2 SELECT Users.id AS `Users__id`, Users.name AS `Users__name` FROM users Users LIMIT 200
+2020-12-14 17:07:55 Debug: duration=0 rows=1 SELECT Categories.id AS `Categories__id`, Categories.title AS `Categories__title` FROM categories Categories LIMIT 200
