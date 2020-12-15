@@ -94,22 +94,6 @@ class PostsController extends AppController
         if ($this->request->is('post')) {
             $post = $this->Posts->patchEntity($post, $this->request->getData());
 
-            if(!$post->getErrors){
-                $image = $this->request->getdata('image_file');
-
-                //$name = $image->getClientFilename();
-    
-                //$targetPath = WWW_ROOT.'img'.DS.$name;
-    
-                /* if($name)
-                $image->moveTo($targetPath);
-
-                $user->image = $name; */
-            }
-            
-
-    
-
             if ($this->Posts->save($post)) {
                 $this->Flash->success(__('L\'article a bien été envoyé.'));
 

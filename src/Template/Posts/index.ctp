@@ -8,7 +8,7 @@
                 <th scope="col"><?= $this->Paginator->sort('category_id', 'Catégorie') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title', 'Titre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('content', 'Contenu') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image', 'Image') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('image', 'Images') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created', 'Créé le') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified', 'Modifié le') ?></th>
             </tr>
@@ -20,13 +20,18 @@
                 <td><?= $post->has('category') ? h($post->category->title) : '' ?></td>
                 <td><?= h($post->title) ?></td>
                 <td><?= h($post->content) ?></td>
-                <td><?php foreach($post->images as $image)
-                {
-                ?>
-                    <img src="<?= $image['path'] ?>" alt="<?= $image['name'] ?>">
-                <?php
-                }
-                ?>
+                <td>
+                    <?php foreach($post->images as $image)
+                    {
+                    ?>
+                        <img src="<?= $image['path'] ?>" alt="<?= $image['name'] ?>">
+                    <?php
+                    }
+                    if ($loggedUser != null AND $post->user->id == $loggedUser['id'])
+                    {
+                        echo $this->Html->link(__('[ Ajouter une photo ]'), ['controller' => 'images', 'action' => 'upload', $post->id]);
+                    }
+                    ?>
                 </td>
                 <td><?= h($post->created) ?></td>
                 <td><?= h($post->modified) ?></td>

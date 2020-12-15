@@ -30,21 +30,35 @@
                 <th scope="col"><?= __('Categorie') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Contenu') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('image', 'Images') ?></th>
                 <th scope="col"><?= __('Créé le') ?></th>
                 <th scope="col"><?= __('Modifié le') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($user->posts as $posts): ?>
+            <?php foreach ($user->posts as $post): ?>
             <tr>
-                <td><?= h($posts->category->title) ?></td>
-                <td><?= h($posts->title) ?></td>
-                <td><?= h($posts->content) ?></td>
-                <td><?= h($posts->created) ?></td>
-                <td><?= h($posts->modified) ?></td>
+                <td><?= h($post->category->title) ?></td>
+                <td><?= h($post->title) ?></td>
+                <td><?= h($post->content) ?></td>
+                <td>
+                    <?php foreach($post->images as $image)
+                    {
+                    ?>
+                        <img src="<?= $image['path'] ?>" alt="<?= $image['name'] ?>">
+                    <?php
+                    }
+                    if ($user->id == $loggedUser['id'])
+                    {
+                        echo $this->Html->link(__('[ Ajouter une photo ]'), ['controller' => 'images', 'action' => 'upload', $post->id]);
+                    }
+                    ?>
+                </td>
+                <td><?= h($post->created) ?></td>
+                <td><?= h($post->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('Voir'), ['controller' => 'Posts', 'action' => 'view', $posts->id]) ?>
-                    <?= $this->Html->link(__('Modifier'), ['controller' => 'Posts', 'action' => 'edit', $posts->id]) ?>
-                    <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Posts', 'action' => 'delete', $posts->id], ['confirm' => __('Êtes-vous sûr(e) de vouloir supprimer cet article ?')]) ?>
+                    <?= $this->Html->link(__('Voir'), ['controller' => 'Posts', 'action' => 'view', $post->id]) ?>
+                    <?= $this->Html->link(__('Modifier'), ['controller' => 'Posts', 'action' => 'edit', $post->id]) ?>
+                    <?= $this->Form->postLink(__('Supprimer'), ['controller' => 'Posts', 'action' => 'delete', $post->id], ['confirm' => __('Êtes-vous sûr(e) de vouloir supprimer cet article ?')]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

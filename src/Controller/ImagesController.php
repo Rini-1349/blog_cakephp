@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use Cake\Utility\Security;
 
-class FilesController extends AppController{
+class ImagesController extends AppController{
     
     public function initialize(){
         parent::initialize();
@@ -11,23 +11,24 @@ class FilesController extends AppController{
     }
 
     public function index(){
-        $files = $this->Files->find('all');
-        $this->set('files', $files);
+        $images = $this->Images->find('all');
+        $this->set('images', $images);
     }
 
-    public function upload(){
+    public function upload($postId = null){
         if($this->request->is('post')){
             $myname = $this->request->getData()['file']['name'];
             $mytmp = $this->request->getData()['file']['tmp_name'];
             $myext = substr(strrchr($myname, "."), 1);
             $mypath = "img/".Security::hash($myname).".".$myext;
-            $file = $this->Files->newEntity();
-            $file->name = $myname;
-            $file->path = $mypath;
-            $file->created = date('Y-m-d H:i:s');
+            $image = $this->Images->newEntity();
+            $image->name = $myname;
+            $image->path = $mypath;
+            $image->created = date('Y-m-d H:i:s');
+            $image->post_id = $postId;
             if(move_uploaded_file($mytmp, WWW_ROOT.$mypath)){
-                $this->Files->save($file);
-                return $this->redirect(['action'=>'index']);
+                $this->Images->save($image);
+                return $this->redirect(['controller' => 'posts', 'action'=>'index']);
             }
         }
     }

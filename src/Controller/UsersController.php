@@ -126,7 +126,7 @@ class UsersController extends AppController
     public function profile($id = null)
     {
         $user = $this->Users->get($id, [
-            'contain' => ['Posts', 'Posts.Categories'],
+            'contain' => ['Posts', 'Posts.Categories', 'Posts.Images'],
         ]);
 
         $this->set('user', $user);
