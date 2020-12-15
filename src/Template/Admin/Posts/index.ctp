@@ -21,7 +21,14 @@
                 <td><?= $post->has('category') ? $this->Html->link($post->category->title, ['controller' => 'Categories', 'action' => 'view', $post->category->id]) : '' ?></td>
                 <td><?= h($post->title) ?></td>
                 <td><?= h($post->content) ?></td>
-                <td><?= h($post->image) ?></td>
+                <td><?php foreach($post->images as $image)
+                {
+                ?>
+                    <img src="<?= $image['path'] ?>" alt="<?= $image['name'] ?>">
+                <?php
+                }
+                ?>
+                </td>
                 <td><?= h($post->created) ?></td>
                 <td><?= h($post->modified) ?></td>
                 <td class="actions">

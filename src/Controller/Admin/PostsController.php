@@ -20,7 +20,7 @@ class PostsController extends AppControllerAdmin
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users', 'Categories'],
+            'contain' => ['Users', 'Categories', 'Images'],
         ];
         $posts = $this->paginate($this->Posts);
 
@@ -54,11 +54,11 @@ class PostsController extends AppControllerAdmin
         if ($this->request->is('post')) {
             $post = $this->Posts->patchEntity($post, $this->request->getData());
             if ($this->Posts->save($post)) {
-                $this->Flash->success(__('The post has been saved.'));
+                $this->Flash->success(__('L\'article a bien été ajouté'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The post could not be saved. Please, try again.'));
+            $this->Flash->error(__('L\'article n\'a pas pu être ajouté'));
         }
         $users = $this->Posts->Users->find('list', [
             'limit' => 200,
@@ -89,11 +89,11 @@ class PostsController extends AppControllerAdmin
         if ($this->request->is(['patch', 'post', 'put'])) {
             $post = $this->Posts->patchEntity($post, $this->request->getData());
             if ($this->Posts->save($post)) {
-                $this->Flash->success(__('The post has been saved.'));
+                $this->Flash->success(__('L\'article a bien été sauvegardé'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The post could not be saved. Please, try again.'));
+            $this->Flash->error(__('L\'article n\'a pas pu être sauvegardé'));
         }
         $users = $this->Posts->Users->find('list', ['limit' => 200]);
         $categories = $this->Posts->Categories->find('list', ['limit' => 200]);
@@ -112,9 +112,9 @@ class PostsController extends AppControllerAdmin
         $this->request->allowMethod(['post', 'delete']);
         $post = $this->Posts->get($id);
         if ($this->Posts->delete($post)) {
-            $this->Flash->success(__('The post has been deleted.'));
+            $this->Flash->success(__('L\'article a bien été supprimé'));
         } else {
-            $this->Flash->error(__('The post could not be deleted. Please, try again.'));
+            $this->Flash->error(__('L\'article n\'a pas pu être supprimé'));
         }
 
         return $this->redirect(['action' => 'index']);

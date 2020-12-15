@@ -86,11 +86,11 @@ class UsersController extends AppControllerAdmin
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('L\'utilisateur a bien été ajouté'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('L\'utilisateur n\'a pas pu être ajouté'));
         }
         $this->set(compact('user'));
     }
@@ -110,11 +110,11 @@ class UsersController extends AppControllerAdmin
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('L\'utilisateur a bien été sauvegardé'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('L\'utilisateur n\'a pas pu être sauvegardé'));
         }
         $this->set(compact('user'));
     }
@@ -131,9 +131,9 @@ class UsersController extends AppControllerAdmin
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
+            $this->Flash->success(__('L\'utilisateur a bien été supprimé'));
         } else {
-            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+            $this->Flash->error(__('L\'utilisateur n\'a pas pu être supprimé'));
         }
 
         return $this->redirect(['action' => 'index']);
