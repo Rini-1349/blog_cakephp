@@ -44,7 +44,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </ul>
         <div class="top-bar-section">
             <ul class="left">
-                <li><?= $this->Html->link(__('Articles'), ['controller' => 'posts', 'action' => 'index']) ?></li>
+                <li> <?= $this->Html->link(__('Retour au site'), '/') ?></li>
             </ul>
         </div>
         <div class="top-bar-section">
@@ -52,14 +52,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <?php
                 if ($loggedUser != null) {
                 ?>
-                    <li> <?= $this->Html->link(__('Mon compte'), ['controller' => 'users', 'action' => 'profile', $loggedUser['id']]) ?></li>
-                    <?php if ($loggedUser['role'] == 1)
-                    {
-                        ?>
-                        <li> <?= $this->Html->link(__('Panel Admin'), '/admin') ?></li>
-                    <?php 
-                    }
-                    ?>
                     <li> <?= $this->Html->link(__('Déconnexion'), ['controller' => 'users', 'action' => 'logout', $loggedUser['id']]) ?></li>
                 <?php
                 } 
@@ -74,6 +66,27 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </nav>
     <?= $this->Flash->render() ?>
+
+    <?php if ($loggedUser != null AND $loggedUser['role'] == 1)
+    {
+    ?>
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <nav class="large-3 medium-4 columns" id="actions-sidebar">
+                    <ul class="side-nav">
+                        <li class="heading"><?= __('Menu principal') ?></li>
+                        <li><?= $this->Html->link('Utilisateurs',['controller' => 'Users', 'action' => 'index']) ?></li>
+                        <li><?= $this->Html->link('Articles',['controller' => 'Posts', 'action' => 'index']) ?></li>    
+                        <li><?= $this->Html->link('Catégories',['controller' => 'Categories', 'action' => 'index']) ?></li>      
+                    </ul>
+                </nav> 
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+    <?php 
+    } 
+    ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>

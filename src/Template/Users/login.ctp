@@ -10,4 +10,5 @@
     </fieldset>
     <?= $this->Form->button(__('Envoyer')) ?>
     <?= $this->Form->end() ?>
+    <p>Pas encore de compte ? <?= $this->Html->link(__('Inscrivez-vous'), ['action' => 'register']) ?></p>
 </div>

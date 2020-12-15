@@ -64,6 +64,15 @@ class AppControllerAdmin extends Controller
          * see https://book.cakephp.org/3/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+
+        $loggedUser = null;
+
+        if($this->Auth->user())
+        {
+            $loggedUser = $this->Auth->user();
+        }
+
+        $this->set('loggedUser', $loggedUser);
     }
 
     public function isAuthorized($user = null)

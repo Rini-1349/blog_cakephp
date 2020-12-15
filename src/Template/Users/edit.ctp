@@ -7,7 +7,6 @@
             echo $this->Form->control('first_name', ['label' => 'Prénom']);
             echo $this->Form->control('pseudo', ['label' => 'Pseudo']);
             echo $this->Form->control('email', ['label' => 'E-mail']);
-            echo $this->Form->control('password', ['label' => 'Mot de passe']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Valider')) ?>
