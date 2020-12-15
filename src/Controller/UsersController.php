@@ -18,6 +18,25 @@ class UsersController extends AppController
         $this->Auth->allow(['login', 'register']);
     }
 
+    // Autorisations d'accès à certaines actions du controller
+    public function isAuthorized($loggedUser = null)
+    {
+        parent::isAuthorized();
+
+        $action = $this->request->getParam('action');
+        $paramPass = $this->request->getParam('pass');
+
+        if (isset($paramPass[0]) AND $paramPass[0] != $loggedUser['id'] AND ($action == 'view' OR $action == 'edit' OR $action == 'profile'))
+        {
+             // Interdit l'accès aux actions des autres utilisateurs
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
     /**
      * Login method
      *
@@ -103,38 +122,11 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|null
-     */
-    public function index()
-    {
-        $users = $this->paginate($this->Users);
-
-        $this->set(compact('users'));
-    }
-
-    /**
-     * View method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $user = $this->Users->get($id, [
-            'contain' => ['Posts'],
-        ]);
-
-        $this->set('user', $user);
-    }
 
     public function profile($id = null)
     {
         $user = $this->Users->get($id, [
-            'contain' => ['Posts'],
+            'contain' => ['Posts', 'Posts.Categories'],
         ]);
 
         $this->set('user', $user);
@@ -155,11 +147,11 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('Votre profil a bien été modifié'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'profile', $id]);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('Votre profil n\'a pas pu être modifié'));
         }
         $this->set(compact('user'));
     }

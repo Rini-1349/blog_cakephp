@@ -62,6 +62,10 @@ class PostsTable extends Table
         $validator
             ->integer('id')
             ->allowEmptyString('id', null, 'create');
+        
+        $validator
+        ->scalar('category_id')
+        ->requirePresence('category_id', 'create');
 
         $validator
             ->scalar('title')
@@ -79,6 +83,19 @@ class PostsTable extends Table
             ->maxLength('image', 255)
             ->requirePresence('image', 'create')
             ->notEmptyFile('image');
+
+        $validator
+            ->allowEmptyFile('image')
+            ->add('image', [
+                'mimeType' => [
+                    'rule' => ['mimeType', ['image/jpg', 'image/png', 'image/jpeg'] ],
+                    'image' => 'Merci de mettre uniquement des images en jpg et png.',
+                ],
+                'fileSize' => [
+                    'rule' => ['fileSize', '<=', '1MB' ],
+                    'message' => 'Merci de ne pas dépasser une taille d\'image de 1MB',
+                ],
+            ]);
 
         return $validator;
     }

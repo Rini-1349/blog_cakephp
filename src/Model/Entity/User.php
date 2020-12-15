@@ -57,4 +57,10 @@ class User extends Entity
             return $hasher->hash($value);
         }
     }
+
+    // Récupérer Prénom + Nom
+    protected function _getLabel()
+    {
+        return $this->_properties['first_name'] . ' ' . $this->_properties['name'];
+    }
 }

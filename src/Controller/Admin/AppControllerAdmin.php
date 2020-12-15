@@ -59,6 +59,7 @@ class AppControllerAdmin extends Controller
             'unauthorizedRedirect' => ['Prefix' => false, 'controller' => 'Users', 'action' => 'login']
         ]);
         
+<<<<<<< HEAD
         $loggedAdmin = null;
 
         if($this->Auth->user())
@@ -67,6 +68,13 @@ class AppControllerAdmin extends Controller
         }
 
         $this->set('loggedAdmin', $loggedAdmin);
+=======
+        /*
+         * Enable the following component for recommended CakePHP security settings.
+         * see https://book.cakephp.org/3/en/controllers/components/security.html
+         */
+        //$this->loadComponent('Security');
+>>>>>>> 85bce88bda3707d72657a9f37858796cfe0516b7
 
         $loggedUser = null;
 

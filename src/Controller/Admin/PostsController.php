@@ -60,7 +60,16 @@ class PostsController extends AppControllerAdmin
             }
             $this->Flash->error(__('The post could not be saved. Please, try again.'));
         }
-        $users = $this->Posts->Users->find('list', ['limit' => 200]);
+        $users = $this->Posts->Users->find('list', [
+            'limit' => 200,
+            'keyField' => 'id',
+            'valueField' => function ($user)
+            {
+                // Afficher Prénom + Nom dans le select de l'admin
+                return $user->get('label');
+            }
+        ]);
+
         $categories = $this->Posts->Categories->find('list', ['limit' => 200]);
         $this->set(compact('post', 'users', 'categories'));
     }
