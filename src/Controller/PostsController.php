@@ -17,6 +17,41 @@ class PostsController extends AppController
         parent::initialize();
         $this->Auth->allow(['index']);
     }
+
+    // Autorisations d'accès à certaines actions du controller
+    public function isAuthorized($loggedUser = null)
+    {
+        parent::isAuthorized();
+
+        $action = $this->request->getParam('action');
+        $paramPass = $this->request->getParam('pass');
+
+        if (isset($paramPass[0]) AND ($action == 'edit' OR $action == 'delete'))
+        {
+            $postsFromUser = $this->Posts->find()->select(['id'])->where(['user_id' == $loggedUser['id']]);
+            $posts = [];
+            foreach ($postsFromUser as $postFromUser)
+            {
+                $posts[] = $postFromUser['id'];
+            }
+
+            if (in_array((int)$paramPass[0], $posts))
+            {
+                // Si l'article est celui de l'utilisateur connecté
+                return true;
+            }
+            else
+            {
+                // Interdit l'accès aux actions des autres utilisateurs
+                return false;
+            }  
+        }
+        else
+        {
+            return true;
+        }
+    }
+
     /**
      * Index method
      *
@@ -62,14 +97,14 @@ class PostsController extends AppController
             if(!$post->getErrors){
                 $image = $this->request->getdata('image_file');
 
-                $name = $image->getClientFilename();
+                //$name = $image->getClientFilename();
     
-                $targetPath = WWW_ROOT.'img'.DS.$name;
+                //$targetPath = WWW_ROOT.'img'.DS.$name;
     
-                if($name)
+                /* if($name)
                 $image->moveTo($targetPath);
 
-                $user->image = $name;
+                $user->image = $name; */
             }
             
 

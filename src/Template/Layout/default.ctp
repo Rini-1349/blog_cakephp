@@ -60,8 +60,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <?php
                 if($loggedUser != null) {
                 ?>
-                    <li> <?= $this->Html->link(__('Détails'), ['controller' => 'users', 'action' => 'profile', $loggedUser['id']]) ?></li>
-                    <li> <?= $this->Html->link(__('Modifier'), ['controller' => 'users', 'action' => 'edit', $loggedUser['id']]) ?></li>
+                    <li> <?= $this->Html->link(__('Mon compte'), ['controller' => 'users', 'action' => 'profile', $loggedUser['id']]) ?></li>
                     <li> <?= $this->Html->link(__('Déconnexion'), ['controller' => 'users', 'action' => 'logout', $loggedUser['id']]) ?></li>
                 <?php
                     }
