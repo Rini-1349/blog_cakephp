@@ -15,7 +15,6 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,33 +38,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a>STLN Actus</a></h1>
+                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
         </ul>
         <div class="top-bar-section">
-            <ul class="left">
-                <li><?= $this->Html->link(__('Articles'), ['controller' => 'posts', 'action' => 'index']) ?></li>
-            </ul>
-        </div>
-        <div class="top-bar-section">
             <ul class="right">
-            <?php
-                if($loggedUser != null) {
-                ?>
-                <?php
-                    } else {  ?>
-                        <li><?= $this->Html->link(__('Connexion'), ['controller' => 'users', 'action' => 'login']) ?></li>
-                        <?php }
-                ?>
-                <?php
-                if($loggedUser != null) {
-                ?>
-                    <li> <?= $this->Html->link(__('Détails'), ['controller' => 'users', 'action' => 'profile', $loggedUser['id']]) ?></li>
-                    <li> <?= $this->Html->link(__('Modifier'), ['controller' => 'users', 'action' => 'edit', $loggedUser['id']]) ?></li>
-                    <li> <?= $this->Html->link(__('Déconnexion'), ['controller' => 'users', 'action' => 'logout', $loggedUser['id']]) ?></li>
-                <?php
-                    }
-                ?>
+                <li><?= $this->Html->link(__('Connexion'), ['controller' => 'users', 'action' => 'login']) ?></li>
+                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>
     </nav>

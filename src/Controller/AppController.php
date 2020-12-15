@@ -59,11 +59,15 @@ class AppController extends Controller
             'unauthorizedRedirect' => ['Prefix' => false, 'controller' => 'Posts']
         ]);
         
-        /*
-         * Enable the following component for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
+        $loggedUser = null;
+
+        if($this->Auth->user())
+        {
+            $loggedUser = $this->Auth->user();
+        }
+
+        $this->set('loggedUser', $loggedUser);
+        
     }
 
     public function isAuthorized()
