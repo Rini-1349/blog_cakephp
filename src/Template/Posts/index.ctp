@@ -16,8 +16,8 @@
         <tbody>
             <?php foreach ($posts as $post): ?>
             <tr>
-                <td><?= $post->has('user') ? $this->Html->link($post->user->first_name . ' ' .$post->user->name, ['controller' => 'Users', 'action' => 'view', $post->user->id]) : '' ?></td>
-                <td><?= $post->has('category') ? $this->Html->link($post->category->title, ['controller' => 'Categories', 'action' => 'view', $post->category->id]) : '' ?></td>
+                <td><?= $post->has('user') ? h($post->user->first_name . ' ' .$post->user->name) : '' ?></td>
+                <td><?= $post->has('category') ? h($post->category->title) : '' ?></td>
                 <td><?= h($post->title) ?></td>
                 <td><?= h($post->content) ?></td>
                 <td><?= h($post->image) ?></td>
