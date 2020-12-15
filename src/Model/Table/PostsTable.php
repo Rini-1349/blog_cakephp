@@ -49,6 +49,10 @@ class PostsTable extends Table
             'foreignKey' => 'category_id',
             'joinType' => 'INNER',
         ]);
+
+        $this->hasMany('Images', [
+            'foreignKey' => 'post_id',
+        ]);
     }
 
     /**

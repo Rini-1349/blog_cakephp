@@ -60,7 +60,7 @@ class PostsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users', 'Categories'],
+            'contain' => ['Users', 'Categories', 'Images'],
         ];
         $posts = $this->paginate($this->Posts);
 
