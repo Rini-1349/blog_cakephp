@@ -49,6 +49,10 @@ class PostsTable extends Table
             'foreignKey' => 'category_id',
             'joinType' => 'INNER',
         ]);
+
+        $this->hasMany('Images', [
+            'foreignKey' => 'post_id',
+        ]);
     }
 
     /**
@@ -77,25 +81,6 @@ class PostsTable extends Table
             ->scalar('content')
             ->requirePresence('content', 'create')
             ->notEmptyString('content');
-
-        $validator
-            ->scalar('image')
-            ->maxLength('image', 255)
-            ->requirePresence('image', 'create')
-            ->notEmptyFile('image');
-
-        $validator
-            ->allowEmptyFile('image')
-            ->add('image', [
-                'mimeType' => [
-                    'rule' => ['mimeType', ['image/jpg', 'image/png', 'image/jpeg'] ],
-                    'image' => 'Merci de mettre uniquement des images en jpg et png.',
-                ],
-                'fileSize' => [
-                    'rule' => ['fileSize', '<=', '1MB' ],
-                    'message' => 'Merci de ne pas dépasser une taille d\'image de 1MB',
-                ],
-            ]);
 
         return $validator;
     }

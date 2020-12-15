@@ -7,7 +7,6 @@
             echo $this->Form->control('category_id', ['options' => $categories, 'label' => 'Catégorie']);
             echo $this->Form->control('title', ['label' => 'Titre']);
             echo $this->Form->control('content', ['label' => 'Contenu']);
-            echo $this->Form->control('image_file',['type'=>'file', 'label' => 'Changer d\'image']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Valider')) ?>

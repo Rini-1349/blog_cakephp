@@ -51,11 +51,11 @@ class CategoriesController extends AppControllerAdmin
         if ($this->request->is('post')) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
-                $this->Flash->success(__('The category has been saved.'));
+                $this->Flash->success(__('La catégorie a été ajoutée'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The category could not be saved. Please, try again.'));
+            $this->Flash->error(__('La catégorie n\'a pas pu être sauvegardée'));
         }
         $this->set(compact('category'));
     }
@@ -75,11 +75,11 @@ class CategoriesController extends AppControllerAdmin
         if ($this->request->is(['patch', 'post', 'put'])) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
-                $this->Flash->success(__('The category has been saved.'));
+                $this->Flash->success(__('La catégorie a été ajoutée'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The category could not be saved. Please, try again.'));
+            $this->Flash->error(__('La catégorie n\'a pas pu être sauvegardée'));
         }
         $this->set(compact('category'));
     }
@@ -96,9 +96,9 @@ class CategoriesController extends AppControllerAdmin
         $this->request->allowMethod(['post', 'delete']);
         $category = $this->Categories->get($id);
         if ($this->Categories->delete($category)) {
-            $this->Flash->success(__('The category has been deleted.'));
+            $this->Flash->success(__('La catégorie a été supprimée'));
         } else {
-            $this->Flash->error(__('The category could not be deleted. Please, try again.'));
+            $this->Flash->error(__('La catégorie n\'a pas pu être supprimée'));
         }
 
         return $this->redirect(['action' => 'index']);
