@@ -111,11 +111,11 @@ class PostsController extends AppController
     
 
             if ($this->Posts->save($post)) {
-                $this->Flash->success(__('The post has been saved.'));
+                $this->Flash->success(__('L\'article a bien été envoyé.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The post could not be saved. Please, try again.'));
+            $this->Flash->error(__('Erreur d\'envoi de l\'article, merci de réessayer.'));
         }
         $users = $this->Posts->Users->find('list', ['limit' => 200]);
         $categories = $this->Posts->Categories->find('list', ['limit' => 200]);
@@ -137,11 +137,11 @@ class PostsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $post = $this->Posts->patchEntity($post, $this->request->getData());
             if ($this->Posts->save($post)) {
-                $this->Flash->success(__('The post has been saved.'));
+                $this->Flash->success(__('L\'article a bien été modifiée.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The post could not be saved. Please, try again.'));
+            $this->Flash->error(__('Erreur de modification, merci de réessayer.'));
         }
         $users = $this->Posts->Users->find('list', ['limit' => 200]);
         $categories = $this->Posts->Categories->find('list', ['limit' => 200]);
@@ -160,9 +160,9 @@ class PostsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $post = $this->Posts->get($id);
         if ($this->Posts->delete($post)) {
-            $this->Flash->success(__('The post has been deleted.'));
+            $this->Flash->success(__('L\'article a bien été supprimer.'));
         } else {
-            $this->Flash->error(__('The post could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Erreur de suppression, merci de réessayer.'));
         }
 
         return $this->redirect(['action' => 'index']);
